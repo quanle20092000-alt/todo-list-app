@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 My To-Do List</h1>
+            <p class="subtitle">Stay organized and productive</p>
+        </header>
+
+        <div class="input-section">
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="todoInput" 
+                    class="todo-input" 
+                    placeholder="Add a new task..."
+                    autocomplete="off"
+                >
+                <button id="addBtn" class="add-btn">Add Task</button>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="pending">Pending</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <div class="stat">
+                <span class="stat-label">Total:</span>
+                <span class="stat-value" id="totalCount">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Completed:</span>
+                <span class="stat-value" id="completedCount">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Pending:</span>
+                <span class="stat-value" id="pendingCount">0</span>
+            </div>
+        </div>
+
+        <div class="todos-section">
+            <ul id="todoList" class="todo-list">
+                <!-- Todos will be dynamically added here -->
+            </ul>
+            <div id="emptyMessage" class="empty-message">
+                ✨ No tasks yet. Add one to get started!
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button id="clearCompletedBtn" class="clear-btn">Clear Completed</button>
+            <button id="clearAllBtn" class="clear-all-btn">Clear All</button>
+        </div>
+
+        <footer>
+            <p>💡 Tip: Your tasks are automatically saved to your browser</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
